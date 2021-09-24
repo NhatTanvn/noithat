@@ -1,0 +1,125 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Page | Index</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" type="image/png" href="/favicon/favicon.ico">
+    <link rel="stylesheet" href="~/user/css/core.min.css">
+    <link rel="stylesheet" href="~/user/css/main.min.css">
+</head>
+<body>
+    <header id="header-top">
+        <div class="header">
+            <div class="header-top">
+                <div class="container">
+                    <div class="header-top__content">
+                        <div class="content">
+                            <div class="content-search">
+                                <input class="content-search--input" type="search" id="search" placeholder="Đồ dùng bạn mong muốn">
+                                <button class="content-search--button">
+                                    <p>TÌM KIẾM</p>
+                                </button>
+                            </div>
+                            <div class="content-info">
+                                <div class="content-info__phone">
+                                    <p>Liên hệ:<span>0909 870 350</span></p>
+                                </div>
+                                <div class="content-info__account">
+                                    <div class="content-info__login"><a href="/login">Đăng nhập &sol;</a></div>
+                                    <div class="content-info__register"> <a href="/login">Đăng ký</a></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <header id="header">
+        <div class="header">
+            <div class="header-main">
+                <div class="container">
+                    <div class="header-main__logo"> <img src="/user/assets/icons/logoHeader.png" alt="logo header"></div>
+                    <ul class="header-main__nav">
+                        <li class="header-main__nav-item active"><a href="/">Trang chủ</a></li>
+                        <li class="header-main__nav-item"><a href="/infor">Giới Thiệu</a></li>
+                        <li class="header-main__nav-item"><a href="/product">sản phẩm</a></li>
+                        <li class="header-main__nav-item hover">
+                            <p>
+                                Dịch vụ
+                                <ul class="header-main__listService">
+                                    <li class="header-main__listService--items"><a href="./">Sửa chữa - Bảo trì</a></li>
+                                    <li class="header-main__listService--items"><a href="./">TƯ VẤN - LẮP ĐẶT</a></li>
+                                </ul>
+                            </p>
+                        </li>
+                        <li class="header-main__nav-item"><a href="/news">Tin Tức</a></li>
+                        <li class="header-main__nav-item"><a href="/contact">Liên Hệ</a></li>
+                    </ul>
+                    <div class="header-main__mobile">
+                        <div class="header-main__cart"> <a class="header-main__cart--link" href="/cart"> <img src="/user/assets/images/layout/header/cartHeader.png" alt="c header"></a></div>
+                        <div class="header-main__button">
+                            <div class="header-main__button-border"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    @RenderBody()
+    <footer id="footer">
+        <div class="footer_wrapper container table-row">
+            <div class="footer-1 column-3">
+                <div class="footer-1__logo"><img src="/user/assets/icons/logoHeader.png" alt="logo header"></div>
+                <div class="footer__more">
+                    <div class="footer__more--pic"><img src="/user/assets/images/layout/footer/icon-1.png" alt=""><img src="/user/assets/images/layout/footer/icon-2.png" alt=""><img src="/user/assets/images/layout/footer/icon-1.png" alt=""><img src="/user/assets/images/layout/footer/icon-2.png" alt=""></div>
+                </div>
+            </div>
+            <div class="footer-2 column-2">
+                <div class="footer-2__link">
+                    <ul>
+                        <li class="items"><a href="">trang chủ</a></li>
+                        <li class="items"><a href="">giới thiệu</a></li>
+                        <li class="items"><a href="">Sản phẩm</a></li>
+                        <li class="items"><a href="">Dịch vụ</a></li>
+                        <li class="items"><a href="">Tiệc cưới</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-3 column-4">
+                <div class="footer-3__title">
+                    <p>CÔNG TY TNHH PM 181</p>
+                </div>
+                <div class="footer-3__infor">
+                    <div class="footer-3__infor--items">
+                        <p>Địa chỉ : 93 Cao Thắng ,Quận 3, TP HCM</p>
+                    </div>
+                    <div class="footer-3__infor--items">
+                        <p>info@hoabinhphuquoc.com.vn</p>
+                    </div>
+                    <div class="footer-3__infor--items">
+                        <p>ĐT: 028 3939 6868  |  0903 939 999 </p>
+                    </div>
+                    <div class="footer-3__infor--items">
+                        <p>Hotline:<span>0909 870 35</span></p>
+                    </div>
+                    <div class="footer-3__infor--items">
+                        <p>Website: www.noithatdogoPM181.vn </p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-4 column-3">
+                <div class="footer-3__title">
+                    <p>Bản Đồ</p>
+                </div>
+                <div class="footer-3__map"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.509380389498!2d106.67692001526036!3d10.772243962215427!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752f20e18aa34d%3A0xfd9ef01724f9e9d8!2zOTMgQ2FvIFRo4bqvbmcsIFBoxrDhu51uZyAzLCBRdeG6rW4gMywgVGjDoG5oIHBo4buRIEjhu5MgQ2jDrSBNaW5oLCBWaeG7h3QgTmFt!5e0!3m2!1svi!2s!4v1628047518931!5m2!1svi!2s" width="400" height="200" style="border:0;" allowfullscreen="" loading="lazy"></iframe></div>
+            </div>
+        </div>
+    </footer>
+    <script type="text/javascript" src="~/user/js/core.min.js"></script>
+    <script type="text/javascript" src="~/user/js/main.min.js"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

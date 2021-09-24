@@ -1,0 +1,86 @@
+﻿@{
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+<!-- Main content -->
+<section class="content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h3 class="card-title">Product Information </h3>
+                    </div>
+                    <!-- /.card-header -->
+                    <div class="card-body">
+                        <table id="example2" class="table table-bordered table-hover">
+                            <thead>
+                                <tr>
+                                    <th>Id</th>
+                                    <th>Name</th>
+                                    <th>Price</th>
+                                    <th>Quanlity</th>
+                                    <th>Category</th>
+                                    <th>Status</th>
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var item in ViewBag.product)
+                                {
+                                <tr>
+                                    <td>@item.Id</td>
+                                    <td>@item.Name</td>
+                                    <td>@item.Price</td>
+                                    <td>@item.Quanlity</td>
+                                    <td>@(item.Category.Name)</td>
+                                    <td>@(item.Status ? "Show" : "Hide")</td>
+                                    <td>
+                                        <a class="btn btn-info btn-sm"
+                                           href="@Url.Action("edit","product", new { id = item.Id })">
+                                            <i class="fas fa-pencil-alt"></i>
+                                            Edit
+                                        </a>
+                                        <a class="btn btn-danger btn-sm"
+                                           href="@Url.Action("delete","product", new { id = item.Id })"
+                                           onclick="return confirm('Are you sure? ')">
+                                            <i class="fas fa-trash"></i>
+                                            Delete
+                                        </a>
+                                        <a class="btn btn-info btn-sm"
+                                           href="@Url.Action("index","gallery", new { id = item.Id })">
+                                            <i class="fas fa-pencil-alt"></i>
+                                            Image List
+                                        </a>
+                                        <a class="btn btn-info btn-sm"
+                                           href="@Url.Action("add","gallery", new { id = item.Id })">
+                                            <i class="fas fa-pencil-alt"></i>
+                                            Add images
+                                        </a>
+                                    </td>
+                                </tr>                                             
+                                }
+                            </tbody>
+                            <tfoot>
+                                <tr>
+                                    <th>Id</th>
+                                    <th>Name</th>
+                                    <th>Price</th>
+                                    <th>Quanlity</th>
+                                    <th>Category</th>
+                                    <th>Status</th>
+                                    <th>Action</th>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </div>
+                    <!-- /.card-body -->
+                </div>
+                <!-- /.card -->
+
+            </div>
+            <!-- /.col -->
+        </div>
+        <!-- /.row -->
+    </div>
+    <!-- /.container-fluid -->
+</section>

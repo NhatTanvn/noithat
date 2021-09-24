@@ -1,0 +1,77 @@
+﻿@model List<Product>
+@{
+    ViewData["Title"] = "Product Page";
+}
+
+<main>
+    <div id="product">
+        <section id="product1">
+            <div class="product-1 column-12 margin-auto" id="productListBox">
+                <div class="product__title" id="productListBox">
+                    <h2>Sản Phẩm</h2>
+                </div>
+                <div class="container">
+                    <div class="product__section">
+                        <div class="product__options">
+                            @await Component.InvokeAsync("Category")
+                        </div>
+                        <div class="product__content">
+                            <form class="product__select" action="/product_info" method="POST">
+                                <div class="product__seclectSearch">
+                                    <input class="product__seclectSearch--input" type="text" id="searchProduct">
+                                    <button class="product__seclectSearch--button">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="18.004" height="21.306" viewBox="0 0 18.004 21.306">
+                                            <path id="Union_1" data-name="Union 1" d="M-8687.214-4910.6l6.426,8.3ZM-8697-4916a6,6,0,0,1,6-6,6,6,0,0,1,6,6,6,6,0,0,1-6,6A6,6,0,0,1-8697-4916Z" transform="translate(8698.001 4923)" fill="none" stroke="#fff" stroke-width="2" />
+                                        </svg>
+                                    </button>
+                                </div>
+                                @*<div class="product__selectYear">
+                                    <select id="cardYear">
+                                        <option value="0">năm sản xuất  </option>
+                                        <option value="2021">2021</option>
+                                        <option value="2020">2020</option>
+                                        <option value="2019">2019</option>
+                                        <option value="2018">2018</option>
+                                    </select>
+                                </div>
+                                <div class="product__selectSort">
+                                    <select id="cardSort">
+                                        <option value="0">Sắp xếp </option>
+                                        <option value="a-z">a-z</option>
+                                        <option value="z-a">z-a</option>
+                                        <option value="priceBiggest">tiền từ lớn đến bé</option>
+                                        <option value="priceSmall">tiền từ bé đến lớn</option>
+                                    </select>
+                                </div>*@
+                            </form>
+                            <div class="product__showProduct table-row table-column-3 table-column-3-tx table-column-2-tm between">
+                                @foreach (var item in Model)
+                                {
+                                    <div class="box">
+                                        <div class="box__img"> <img src="~/user/assets/images/page/index/i1-img-product.png" alt="images-product"></div>
+                                        <div class="box__content">
+                                            <div class="box__title">
+                                                <h3>@item.Name</h3>
+                                            </div>
+                                            <div class="box__priceDiscount">
+                                                <p>@item.Price<span>Đ</span></p>
+                                            </div>
+                                            <div class="box__more">
+                                                <a class="btn-link--more" href="@Url.Action("details", "product", new { item.Id})">
+                                                    Xem sản phầm<svg xmlns="http://www.w3.org/2000/svg" width="8" height="11" viewBox="0 0 7 8">
+                                                        <path id="Polygon_10" data-name="Polygon 10" d="M4,0,8,7H0Z" transform="translate(7) rotate(90)" fill="#008c8c" />
+                                                    </svg>
+                                                </a><a class="btn-link--more" href="@Url.Action("buy","cart", new { item.Id})">Mua</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                }                               
+                            </div>
+                            <ul class="box-pagination">  </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</main>

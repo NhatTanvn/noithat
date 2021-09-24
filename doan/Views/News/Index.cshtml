@@ -1,0 +1,39 @@
+﻿@model List<Article>
+@{
+    ViewData["Title"] = "News Page";
+}
+@await Component.InvokeAsync("Banner")
+<main>
+    <div id="newsPage">
+        <section id="news-1">
+            <div class="news-1">
+                <div class="news-1__title" id="newsListBox">
+                    <h2>Tin Tức </h2>
+                </div>
+                <div class="container">
+                    <div class="news-1__content table-row table-column-3 table-column-2-tl table-column-1-mx">
+                        @foreach (var item in Model)
+                        {
+                            <div class="news-1--padding">
+                                <div class="news-box">
+                                    <div class="news-box__img"><img src="@item.Description" alt="img-news"></div>
+                                    <div class="news-box__content">
+                                        <div class="news-box__time"><span></span></div>
+                                        <div class="news-box__title">
+                                            <h3>@item.Title</h3>
+                                        </div>
+                                        <div class="news-box__desc">
+                                            <p>@item.Content</p>
+                                        </div>
+                                        <div class="news-box__more"><a class="btn-link--more" href="@Url.Action("detalis","news", new { item.Id})">Xem thêm</a></div>
+                                    </div>
+                                </div>
+                            </div>
+                        }
+                    </div>
+                </div>
+                <ul class="box-pagination">  </ul>
+            </div>
+        </section>
+    </div>
+</main>

@@ -1,0 +1,72 @@
+﻿@{
+    ViewData["Title"] = "Lognin Page";
+}
+
+<main>
+    <div id="login-register">
+        <section id="login-register">
+            <div class="login-register">
+                <div class="container">
+                    <div class="login-register__wrapper">
+                        <div class="login-register__title">
+                            <ul class="login-register__title--list">
+                                <li class="login-register__title--item active" data-active="1">
+                                    <h2>Đăng nhập</h2>
+                                </li>
+                                <li class="login-register__title--item" data-active="2">
+                                    <h2>Đăng ký</h2>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="login-register__form" data-active="1">
+                            <div class="login-register__form--title">
+                                <h3>Đăng nhập vào tài khoản của bạn</h3>
+                            </div>
+                            <form class="login-register__formLogin" action="/infor-login" method="POST">
+                                <div class="login-register__inputName">
+                                    <input type="text" id="loginName" placeholder="Tên đăng nhập hoắc email">
+                                </div>
+                                <div class="login-register__inputPass">
+                                    <input type="text" id="loginPass" placeholder="Mật khẩu">
+                                </div>
+                                <div class="login-register__forgetPass">
+                                    <a href="/forget-password.html">
+                                        <p>Bạn quên mật khẩu </p>
+                                    </a>
+                                </div>
+                                <div class="login-register__button">
+                                    <button class="login-register__button--submit" id="btn-login">
+                                        <p>Đăng nhập</p>
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="login-register__form display-none" data-active="2">
+                            <div class="login-register__form--title">
+                                <h3>Đăng ký tài khoản</h3>
+                            </div>
+                            <form class="login-register__formLogin" action="">
+                                <div class="login-register__inputName">
+                                    <input type="text" id="registerName" placeholder="Email">
+                                </div>
+                                <div class="login-register__inputPass">
+                                    <input type="text" id="registerPass" placeholder="Mật khẩu">
+                                </div>
+                                <div class="login-register__forgetPass">
+                                    <a href="#">
+                                        <p>Dữ liệu cá nhân của bạn sẽ được sử dụng để hỗ trợ trải nghiệm của bạn trên toàn bộ trang web này, để quản lý quyền truy cập vào tài khoản của bạn và cho các mục đích khác được mô tả trong chính sách riêng tư của chúng tôi.</p>
+                                    </a>
+                                </div>
+                                <div class="login-register__button">
+                                    <button class="login-register__button--submit">
+                                        <p>Đăng Ký</p>
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</main>

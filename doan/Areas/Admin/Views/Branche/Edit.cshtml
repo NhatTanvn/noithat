@@ -1,0 +1,73 @@
+﻿@model DoAn.Models.Branch;
+@{
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+<section class="content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h3 class="card-title">Branches Edit</h3>
+                    </div>
+                    <div class="card card-primary">
+
+                        <!-- /.card-header -->
+                        <!-- form start -->
+                        @using (Html.BeginForm())
+                        {
+                            @*<form action="/admin/category/add" method="post">*@
+                            <div class="card-body">
+                                <div class="form-group">
+                                    <label for="title">Title</label>
+                                    @Html.TextBoxFor(c => c.Title, new { @class = "form-control" })
+                                </div>
+                                <div class="form-group">
+                                    <label for="address">Address</label>
+                                    @Html.TextBoxFor(c => c.Address, new { @class = "form-control" })
+                                </div>
+                                <div class="form-group">
+                                    <label for="email">Email</label>
+                                    @Html.TextBoxFor(c => c.Email, new { @class = "form-control" })
+                                </div>
+                                <div class="form-group">
+                                    <label for="phone">Phone</label>
+                                    @Html.TextBoxFor(c => c.Phone, new { @class = "form-control" })
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="fax">Fax</label>
+                                    @Html.TextBoxFor(c => c.Fax, new { @class = "form-control" })
+                                </div>
+                                <div class="form-group">
+                                    <label for="hotline">Hotline</label>
+                                    @Html.TextBoxFor(c => c.Hotline, new { @class = "form-control" })
+                                </div>
+                                <div class="form-group">
+                                    <label for="website">Website</label>
+                                    @Html.TextBoxFor(c => c.Website, new { @class = "form-control" })
+                                </div>
+                            </div>
+                            <!-- /.card-body -->
+                            <div class="card-footer">
+                                <button onclick="@Url.Action("index","branche", new {area="admin" })"
+                                        type="submit" class="btn btn-secondary">
+                                    Cancel
+                                </button>
+                                <button type="submit" class="btn btn-primary">Update</button>
+                            </div>
+
+                            @*</form>*@
+                        }
+
+                    </div>
+                </div>
+                <!-- /.card -->
+
+            </div>
+            <!-- /.col -->
+        </div>
+        <!-- /.row -->
+    </div>
+    <!-- /.container-fluid -->
+</section>

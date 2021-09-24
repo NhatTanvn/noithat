@@ -1,0 +1,79 @@
+﻿@{
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+<!-- Main content -->
+<section class="content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h3 class="card-title">Article </h3>
+                    </div>
+                    <!-- /.card-header -->
+                    <div class="card-body">
+                        <table id="example2" class="table table-bordered table-hover">
+                            <thead>
+                                <tr>
+                                    <th>Id</th>
+                                    <th>Title</th>
+                                    <th>Content</th>
+                                    <th>Description</th>                                  
+                                    <th>Status</th>
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var item in ViewBag.article)
+                                {
+                                    <tr>
+                                        <td>@item.Id</td>
+                                        <td>@item.Title</td>
+                                        <td>@item.Content</td>
+                                        <td>@item.Description</td>                                      
+                                        <td>@(item.Status ? "Show" : "Hide")</td>
+                                        <td>
+                                            <a class="btn btn-info btn-sm"
+                                               href="@Url.Action("view","article", new { id = item.Id })">
+                                                <i class="fas fa-fonder"></i>
+                                                View
+                                            </a>
+                                            <a class="btn btn-info btn-sm"
+                                               href="@Url.Action("edit","article", new { id = item.Id })">
+                                                <i class="fas fa-pencil-alt"></i>
+                                                Edit
+                                            </a>
+                                            <a class="btn btn-danger btn-sm"
+                                               href="@Url.Action("delete","article", new { id = item.Id })"
+                                               onclick="return confirm('Are you sure? ')">
+                                                <i class="fas fa-trash"></i>
+                                                Delete
+                                            </a>
+                                        </td>
+                                    </tr>
+
+                                }
+                            </tbody>
+                            <tfoot>
+                                <tr>
+                                    <th>Id</th>
+                                    <th>Title</th>
+                                    <th>Content</th>
+                                    <th>Description</th>
+                                    <th>Status</th>
+                                    <th>Action</th>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </div>
+                    <!-- /.card-body -->
+                </div>
+                <!-- /.card -->
+
+            </div>
+            <!-- /.col -->
+        </div>
+        <!-- /.row -->
+    </div>
+    <!-- /.container-fluid -->
+</section>

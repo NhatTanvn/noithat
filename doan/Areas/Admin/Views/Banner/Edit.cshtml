@@ -1,0 +1,64 @@
+﻿@model DoAn.Models.Banner;
+@{
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+<section class="content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h3 class="card-title">Banner Edit</h3>
+                    </div>
+                    <div class="card card-primary">
+
+                        <!-- /.card-header -->
+                        <!-- form start -->
+                        <form method="post" asp-controller="banner" asp-action="add" enctype="multipart/form-data">
+                            <div class="card-body">
+                                <div class="form-group">
+                                    <label for="name">Name</label>
+                                    @Html.TextBoxFor(c => c.Name, new { @class = "form-control" })
+                                </div>
+                                <div class="form-group">
+                                    <label for="desciption">Desciption</label>
+                                    @Html.TextBoxFor(c => c.Desciption, new { @class = "form-control" })
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleInputFile">File input</label>
+                                    <div class="custom-file">
+                                        <input type="file" class="custom-file-input" name="images" id="customFile">
+                                        <label class="custom-file-label"></label>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="form-check">
+                                        @Html.CheckBoxFor(c => c.Status)
+                                        <label class="form-check-label" for="status">Status</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- /.card-body -->
+                            <div class="card-footer">
+                                <button type="submit" class="btn btn-primary">Update</button>
+                            </div>
+                        </form>
+
+                    </div>
+                </div>
+                <!-- /.card -->
+
+            </div>
+            <!-- /.col -->
+        </div>
+        <!-- /.row -->
+    </div>
+    <!-- /.container-fluid -->
+</section>
+@section Scripts{
+    <script type="text/javascript">
+    $(function () {
+        bsCustomFileInput.init();
+    });
+    </script>
+}

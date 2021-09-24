@@ -1,0 +1,67 @@
+﻿@model List<Branch> 
+@{
+    ViewData["Title"] = "Contact Page";
+}
+
+@await Component.InvokeAsync("Banner")
+<main>
+    <div id="contactPage">
+        <section id="contact-1__wrapper">
+            <div class="container">
+                <div class="contact-1 product">
+                    <div class="product__title">
+                        <p>thông tin liên hệ</p>
+                    </div>
+                    <div class="contact-1__section">
+                        <div class="content__section column-5 column-12-ts">
+                            <div class="content">
+                                @foreach (var item in Model)
+                                {
+                                    <div class="content__items">
+                                        <div class="content__items--title">
+                                            <p>@item.Title</p>
+                                        </div>
+                                        <div class="content__items--decs">
+                                            <p>@item.Address</p>
+                                            <p>ĐT: @item.Phone  |  @item.Fax</p>
+                                            <p>Website: @item.Website</p>
+                                        </div>
+                                    </div>
+                                }                               
+                                <div class="content__items">
+                                    <div class="content__items--decs">                                     
+                                        <p>Cám ơn quý khách đã quan tâm đến sản phẩm của chúng tôi !</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="contact-1__section--form column-7 column-12-ts">
+                            <form class="contact-form" action="" method="POST">
+                                <div class="contact-form__name">
+                                    <input type="text" id="nameContact" placeholder="Họ và tên">
+                                </div>
+                                <div class="contact-form__phone">
+                                    <input type="text" id="phoneContact" placeholder="Diện thoại">
+                                </div>
+                                <div class="contact-form__email">
+                                    <input type="text" id="emailContact" placeholder="Email">
+                                </div>
+                                <div class="contact-form__unit">
+                                    <input type="text" id="unitContact" placeholder="Dơn vị">
+                                </div>
+                                <div class="contact-form__button">
+                                    <button class="btn--link" id="btn-gui">
+                                        <p>Gửi</p>
+                                    </button>
+                                    <button class="btn--link" id="btn-nhaplai">
+                                        <p>Nhập lại</p>
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</main>

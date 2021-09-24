@@ -1,0 +1,508 @@
+﻿@model DoAn.Models.Product
+<section id="breadcrumb">
+    <div class="breadcrumb">
+        <ul class="breadcrumb-list container">
+            <li class="breadcrumb-item"><a class="breadcrumb-item__link uppercase" href="/">Trang chủ</a></li>
+            <li class="breadcrumb-item"><a class="breadcrumb-item__link uppercase" href="#">Sản Phẩm</a></li>
+        </ul>
+    </div>
+</section>
+<main>
+    <div id="product">  
+        <section id="produc-details-1">
+            <div class="product-details-1">
+                <div class="container">
+                    <div class="product-details-1__section">
+                        <div class="content table-row column-12">
+                            <div class="content__slide column-6 column-8-tl">
+                                <div class="content__slide--top">
+                                    <div class="swiper-container content-img--swiper">
+                                        <div class="swiper-wrapper">
+                                            <div class="swiper-slide">
+                                                <div class="content__img"><img src="~/user/assets/images/page/product-details/pds-img-product.png" alt="product-details"></div>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <div class="content__img"><img src="~/user/assets/images/page/product-details/pds-img-product-2.png" alt="product-details"></div>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <div class="content__img"><img src="~/user/assets/images/page/product-details/pds-img-product.png" alt="product-details"></div>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <div class="content__img"><img src="~/user/assets/images/page/product-details/pds-img-product-2.png" alt="product-details"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="content__slide--thumb">
+                                    <div class="swiper-container content-img--swiper">
+                                        <div class="swiper-wrapper">
+                                            <div class="swiper-slide">
+                                                <div class="content__img"><img src="~/user/assets/images/page/product-details/pds-img-product.png" alt="product-details"></div>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <div class="content__img"><img src="~/user/assets/images/page/product-details/pds-img-product-2.png" alt="product-details"></div>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <div class="content__img"><img src="~/user/assets/images/page/product-details/pds-img-product.png" alt="product-details"></div>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <div class="content__img"><img src="~/user/assets/images/page/product-details/pds-img-product-2.png" alt="product-details"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="content__infor column-6 column-8-tl">
+                                <div class="content__title">
+                                    <p>@Model.Name</p>
+                                </div>
+                                <div class="content__productCore">
+                                    <div class="content__productCore--title">
+                                        <h3>Mã Sản Xuất </h3>
+                                    </div>
+                                    <div class="content__productCore--value">
+                                        <p>@Model.Material</p>
+                                    </div>
+                                </div>
+                                <div class="content__productYear">
+                                    <div class="content__productYear--title">
+                                        <h3>kích thước</h3>
+                                    </div>
+                                    <div class="content__productYear--value">
+                                        <p>@Model.Size</p>
+                                    </div>
+                                </div>
+                                <div class="content__productPrice">
+                                    <div class="content__productPrice--title">
+                                        <h3>Giá</h3>
+                                    </div>
+                                    <div class="content__productPrice--value">
+                                        <p>@Model.Price<span>đ</span></p>
+                                    </div>
+                                </div>
+                                <div class="content__button">
+                                    <button class="content__button--buy" @Url.ActionLink("buy","cart", new { Model.Id})>
+                                        <p>Mua sản phẩm</p>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="product-details-2">
+            <div class="product-details-2">
+                <div class="container">
+                    <div class="product-details-2__section">
+                        <div class="content">
+                            <div class="content__title">
+                                <ul class="content__list">
+                                    <li class="content__items active" data-active="1">
+                                        <p>Mô tả</p>
+                                    </li>
+                                    <li class="content__items" data-active="2">
+                                        <p>thông số kỹ thuật</p>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="content__review" data-active="1">
+                                <div class="content__review--title">
+                                    <h3>Thiết kế sản phẩm</h3>
+                                </div>
+                                <div class="content__review--infor--padding">
+                                    <p>Bộ sản phẩm bàn ăn mặt đá tròn có thể gấp mở mặt thông minh với kích thước khi mở là bàn tròn D130cm gấp lại sẽ thành 1 bàn chữ nhật kích thước 80x130cm, chân thép sơn tĩnh điện khỏe khắn, chắc chắn tạo sự tinh tế, sang trọng cho không gian. Phần chân bàn thiết kế cách điệu với chất liệu thép sơn tĩnh điện đã trở thành điểm nhấn của sản phẩm.</p><br>
+                                    <p>Bộ bàn ăn tròn thông minh 6 ghế với phần lưng nệm được bọc da PU kết hợp vải tạo sự thoải mái, êm ái khi sử dụng. Chân cũng được sử dụng chất liệu thép sơn tĩnh điện tạo cảm giác chắc chắn nhưng không kém phần thoải mái khi ngồi. Bộ bàn ghế đều sử dụng chất liệu cao cấp nên chịu tải trọng tốt.</p>
+                                </div>
+                                <div class="content__review--title">
+                                    <h3>Thiết kế sản phẩm</h3>
+                                </div>
+                                <div class="content__review--infor--padding">
+                                    <p>Bộ sản phẩm bàn ăn mặt đá tròn có thể gấp mở mặt thông minh với kích thước khi mở là bàn tròn D130cm gấp lại sẽ thành 1 bàn chữ nhật kích thước 80x130cm, chân thép sơn tĩnh điện khỏe khắn, chắc chắn tạo sự tinh tế, sang trọng cho không gian. Phần chân bàn thiết kế cách điệu với chất liệu thép sơn tĩnh điện đã trở thành điểm nhấn của sản phẩm.</p><br>
+                                    <p>Bộ bàn ăn tròn thông minh 6 ghế với phần lưng nệm được bọc da PU kết hợp vải tạo sự thoải mái, êm ái khi sử dụng. Chân cũng được sử dụng chất liệu thép sơn tĩnh điện tạo cảm giác chắc chắn nhưng không kém phần thoải mái khi ngồi. Bộ bàn ghế đều sử dụng chất liệu cao cấp nên chịu tải trọng tốt.</p>
+                                </div>
+                                <div class="content__review--title">
+                                    <h3>Thiết kế sản phẩm</h3>
+                                </div>
+                                <div class="content__review--infor--padding">
+                                    <p>Bộ sản phẩm bàn ăn mặt đá tròn có thể gấp mở mặt thông minh với kích thước khi mở là bàn tròn D130cm gấp lại sẽ thành 1 bàn chữ nhật kích thước 80x130cm, chân thép sơn tĩnh điện khỏe khắn, chắc chắn tạo sự tinh tế, sang trọng cho không gian. Phần chân bàn thiết kế cách điệu với chất liệu thép sơn tĩnh điện đã trở thành điểm nhấn của sản phẩm.</p><br>
+                                    <p>Bộ bàn ăn tròn thông minh 6 ghế với phần lưng nệm được bọc da PU kết hợp vải tạo sự thoải mái, êm ái khi sử dụng. Chân cũng được sử dụng chất liệu thép sơn tĩnh điện tạo cảm giác chắc chắn nhưng không kém phần thoải mái khi ngồi. Bộ bàn ghế đều sử dụng chất liệu cao cấp nên chịu tải trọng tốt.</p>
+                                </div>
+                                <div class="content__review--title">
+                                    <h3>Ưu điểm tuyệt vời của bộ bàn ăn thông minh</h3>
+                                </div>
+                                <div class="content__review--infor">
+                                    <ul class="content__review--list">
+                                        <li class="content__review--items">
+                                            <p>Thiết kế đẳng cấp, sang trọng: Mẫu bàn có thiết kế cách điệu vừa tạo sự đẳng cấp lại vừa hiện đại, trẻ trung. Đặc biệt với nhiều màu sắc của ghế và mặt bàn sẽ giúp bạn dễ dàng phối màu nội thất không gian bếp hoàn hảo nhất.</p>
+                                        </li>
+                                        <li class="content__review--items">
+                                            <p>Chất lượng tốt, bền lâu: Bộ bàn ăn  thông minh 6 ghế T1106-6×2108 đều sử dụng những chất liệu cao cấp: Mặt đá chống trầy xước, chịu nhiệt tốt, chân bàn thép sơn tĩnh điện chắc chắn. Phần ghế với lưng nệm bọc da PU kết hợp vải bố tạo sự sang trọng, êm ái khi ngồi, chân ghế thép sơn tĩnh điện an toàn, chịu tải trọng tốt. Bộ sản phẩm còn dễ dàng vệ sinh, lau chùi.</p>
+                                        </li>
+                                        <li class="content__review--items">
+                                            <p>Giá ưu đãi: Hiện Bộ bàn ăn tròn thông minh 6 ghế T1106-6×2108 đang có giá ưu đãi hấp dẫn tại Nội thất PM181</p>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="content__review" data-active="2">
+                                <div class="content__review--title">
+                                    <h3>Thông Số Kỹ Thuật </h3>
+                                </div>
+                                <div class="content__review--infor">
+                                    <ul class="content__review--list">
+                                        <li class="content__review--items">
+                                            <p>Tên sản phẩm: @Model.Name.</p>
+                                        </li>
+                                        <li class="content__review--items">
+                                            <p>Kích thước: @Model.Size</p>
+                                        </li>
+                                        <li class="content__review--items">
+                                            <p>Vật liệu: @Model.Material</p>
+                                        </li>                       
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        @*<div class="product-details-3">
+        <div class="product-details__title">
+        <h2>Sản Phẩm Liên Quan</h2>
+        </div>
+        <div class="container">
+        <div class="product-details__slider table-row column-12 margin-auto">
+        <div class="swiper-container product-details--swiper swiper-container-initialized swiper-container-horizontal swiper-container-pointer-events">
+        <div class="swiper-wrapper" id="swiper-wrapper-0002f4a6539aab36" aria-live="polite" style="transform: translate3d(-1116px, 0px, 0px); transition-duration: 0ms;">
+        <div class="swiper-slide swiper-slide-duplicate swiper-slide-duplicate-next" role="group" aria-label="2 / 6" data-swiper-slide-index="1" style="width: 207.2px; margin-right: 16px;">
+        <div class="box">
+            <div class="box__img"> <img src="~/user/assets/images/page/index/i1-img-product.png" alt="images-product"></div>
+            <div class="box__content">
+                <div class="box__title">
+                    <h3>Bàn Ăn Thông Minh 20201</h3>
+                </div>
+                <div class="box__priceDiscount">
+                    <p>1.490.000<span>Đ</span></p>
+                </div>
+                <div class="box__more">
+                    <a class="btn-link--more" href="./product-details.html">
+                        Xem sản phầm<svg xmlns="http://www.w3.org/2000/svg" width="8" height="11" viewBox="0 0 7 8">
+                            <path id="Polygon_10" data-name="Polygon 10" d="M4,0,8,7H0Z" transform="translate(7) rotate(90)" fill="#008c8c"></path>
+                        </svg>
+                    </a><a class="btn-link--more" href="#">Mua</a>
+                </div>
+            </div>
+        </div>
+        </div><div class="swiper-slide swiper-slide-duplicate" role="group" aria-label="3 / 6" data-swiper-slide-index="2" style="width: 207.2px; margin-right: 16px;">
+        <div class="box">
+            <div class="box__img"> <img src="~/user/assets/images/page/index/i1-img-product.png" alt="images-product"></div>
+            <div class="box__content">
+                <div class="box__title">
+                    <h3>Bàn Ăn Thông Minh 20201</h3>
+                </div>
+                <div class="box__priceDiscount">
+                    <p>1.490.000<span>Đ</span></p>
+                </div>
+                <div class="box__more">
+                    <a class="btn-link--more" href="./product-details.html">
+                        Xem sản phầm<svg xmlns="http://www.w3.org/2000/svg" width="8" height="11" viewBox="0 0 7 8">
+                            <path id="Polygon_10" data-name="Polygon 10" d="M4,0,8,7H0Z" transform="translate(7) rotate(90)" fill="#008c8c"></path>
+                        </svg>
+                    </a><a class="btn-link--more" href="#">Mua</a>
+                </div>
+            </div>
+        </div>
+        </div><div class="swiper-slide swiper-slide-duplicate" role="group" aria-label="4 / 6" data-swiper-slide-index="3" style="width: 207.2px; margin-right: 16px;">
+        <div class="box">
+            <div class="box__img"> <img src="~/user/assets/images/page/index/i1-img-product.png" alt="images-product"></div>
+            <div class="box__content">
+                <div class="box__title">
+                    <h3>Bàn Ăn Thông Minh 20201</h3>
+                </div>
+                <div class="box__priceDiscount">
+                    <p>1.490.000<span>Đ</span></p>
+                </div>
+                <div class="box__more">
+                    <a class="btn-link--more" href="./product-details.html">
+                        Xem sản phầm<svg xmlns="http://www.w3.org/2000/svg" width="8" height="11" viewBox="0 0 7 8">
+                            <path id="Polygon_10" data-name="Polygon 10" d="M4,0,8,7H0Z" transform="translate(7) rotate(90)" fill="#008c8c"></path>
+                        </svg>
+                    </a><a class="btn-link--more" href="#">Mua</a>
+                </div>
+            </div>
+        </div>
+        </div><div class="swiper-slide swiper-slide-duplicate" role="group" aria-label="5 / 6" data-swiper-slide-index="4" style="width: 207.2px; margin-right: 16px;">
+        <div class="box">
+            <div class="box__img"> <img src="~/user/assets/images/page/index/i1-img-product.png" alt="images-product"></div>
+            <div class="box__content">
+                <div class="box__title">
+                    <h3>Bàn Ăn Thông Minh 20201</h3>
+                </div>
+                <div class="box__priceDiscount">
+                    <p>1.490.000<span>Đ</span></p>
+                </div>
+                <div class="box__more">
+                    <a class="btn-link--more" href="./product-details.html">
+                        Xem sản phầm<svg xmlns="http://www.w3.org/2000/svg" width="8" height="11" viewBox="0 0 7 8">
+                            <path id="Polygon_10" data-name="Polygon 10" d="M4,0,8,7H0Z" transform="translate(7) rotate(90)" fill="#008c8c"></path>
+                        </svg>
+                    </a><a class="btn-link--more" href="#">Mua</a>
+                </div>
+            </div>
+        </div>
+        </div><div class="swiper-slide swiper-slide-duplicate swiper-slide-prev" role="group" aria-label="6 / 6" data-swiper-slide-index="5" style="width: 207.2px; margin-right: 16px;">
+        <div class="box">
+            <div class="box__img"> <img src="~/user/assets/images/page/index/i1-img-product.png" alt="images-product"></div>
+            <div class="box__content">
+                <div class="box__title">
+                    <h3>Bàn Ăn Thông Minh 20201</h3>
+                </div>
+                <div class="box__priceDiscount">
+                    <p>1.490.000<span>Đ</span></p>
+                </div>
+                <div class="box__more">
+                    <a class="btn-link--more" href="./product-details.html">
+                        Xem sản phầm<svg xmlns="http://www.w3.org/2000/svg" width="8" height="11" viewBox="0 0 7 8">
+                            <path id="Polygon_10" data-name="Polygon 10" d="M4,0,8,7H0Z" transform="translate(7) rotate(90)" fill="#008c8c"></path>
+                        </svg>
+                    </a><a class="btn-link--more" href="#">Mua</a>
+                </div>
+            </div>
+        </div>
+        </div>
+        <div class="swiper-slide swiper-slide-active" role="group" aria-label="1 / 6" data-swiper-slide-index="0" style="width: 207.2px; margin-right: 16px;">
+        <div class="box">
+            <div class="box__img"> <img src="~/user/assets/images/page/index/i1-img-product.png" alt="images-product"></div>
+            <div class="box__content">
+                <div class="box__title">
+                    <h3>Bàn Ăn Thông Minh 20201</h3>
+                </div>
+                <div class="box__priceDiscount">
+                    <p>1.490.000<span>Đ</span></p>
+                </div>
+                <div class="box__more">
+                    <a class="btn-link--more" href="./product-details.html">
+                        Xem sản phầm<svg xmlns="http://www.w3.org/2000/svg" width="8" height="11" viewBox="0 0 7 8">
+                            <path id="Polygon_10" data-name="Polygon 10" d="M4,0,8,7H0Z" transform="translate(7) rotate(90)" fill="#008c8c"></path>
+                        </svg>
+                    </a><a class="btn-link--more" href="#">Mua</a>
+                </div>
+            </div>
+        </div>
+        </div>
+        <div class="swiper-slide swiper-slide-next" role="group" aria-label="2 / 6" data-swiper-slide-index="1" style="width: 207.2px; margin-right: 16px;">
+        <div class="box">
+            <div class="box__img"> <img src="~/user/assets/images/page/index/i1-img-product.png" alt="images-product"></div>
+            <div class="box__content">
+                <div class="box__title">
+                    <h3>Bàn Ăn Thông Minh 20201</h3>
+                </div>
+                <div class="box__priceDiscount">
+                    <p>1.490.000<span>Đ</span></p>
+                </div>
+                <div class="box__more">
+                    <a class="btn-link--more" href="./product-details.html">
+                        Xem sản phầm<svg xmlns="http://www.w3.org/2000/svg" width="8" height="11" viewBox="0 0 7 8">
+                            <path id="Polygon_10" data-name="Polygon 10" d="M4,0,8,7H0Z" transform="translate(7) rotate(90)" fill="#008c8c"></path>
+                        </svg>
+                    </a><a class="btn-link--more" href="#">Mua</a>
+                </div>
+            </div>
+        </div>
+        </div>
+        <div class="swiper-slide" role="group" aria-label="3 / 6" data-swiper-slide-index="2" style="width: 207.2px; margin-right: 16px;">
+        <div class="box">
+            <div class="box__img"> <img src="~/user/assets/images/page/index/i1-img-product.png" alt="images-product"></div>
+            <div class="box__content">
+                <div class="box__title">
+                    <h3>Bàn Ăn Thông Minh 20201</h3>
+                </div>
+                <div class="box__priceDiscount">
+                    <p>1.490.000<span>Đ</span></p>
+                </div>
+                <div class="box__more">
+                    <a class="btn-link--more" href="./product-details.html">
+                        Xem sản phầm<svg xmlns="http://www.w3.org/2000/svg" width="8" height="11" viewBox="0 0 7 8">
+                            <path id="Polygon_10" data-name="Polygon 10" d="M4,0,8,7H0Z" transform="translate(7) rotate(90)" fill="#008c8c"></path>
+                        </svg>
+                    </a><a class="btn-link--more" href="#">Mua</a>
+                </div>
+            </div>
+        </div>
+        </div>
+        <div class="swiper-slide" role="group" aria-label="4 / 6" data-swiper-slide-index="3" style="width: 207.2px; margin-right: 16px;">
+        <div class="box">
+            <div class="box__img"> <img src="~/user/assets/images/page/index/i1-img-product.png" alt="images-product"></div>
+            <div class="box__content">
+                <div class="box__title">
+                    <h3>Bàn Ăn Thông Minh 20201</h3>
+                </div>
+                <div class="box__priceDiscount">
+                    <p>1.490.000<span>Đ</span></p>
+                </div>
+                <div class="box__more">
+                    <a class="btn-link--more" href="./product-details.html">
+                        Xem sản phầm<svg xmlns="http://www.w3.org/2000/svg" width="8" height="11" viewBox="0 0 7 8">
+                            <path id="Polygon_10" data-name="Polygon 10" d="M4,0,8,7H0Z" transform="translate(7) rotate(90)" fill="#008c8c"></path>
+                        </svg>
+                    </a><a class="btn-link--more" href="#">Mua</a>
+                </div>
+            </div>
+        </div>
+        </div>
+        <div class="swiper-slide" role="group" aria-label="5 / 6" data-swiper-slide-index="4" style="width: 207.2px; margin-right: 16px;">
+        <div class="box">
+            <div class="box__img"> <img src="~/user/assets/images/page/index/i1-img-product.png" alt="images-product"></div>
+            <div class="box__content">
+                <div class="box__title">
+                    <h3>Bàn Ăn Thông Minh 20201</h3>
+                </div>
+                <div class="box__priceDiscount">
+                    <p>1.490.000<span>Đ</span></p>
+                </div>
+                <div class="box__more">
+                    <a class="btn-link--more" href="./product-details.html">
+                        Xem sản phầm<svg xmlns="http://www.w3.org/2000/svg" width="8" height="11" viewBox="0 0 7 8">
+                            <path id="Polygon_10" data-name="Polygon 10" d="M4,0,8,7H0Z" transform="translate(7) rotate(90)" fill="#008c8c"></path>
+                        </svg>
+                    </a><a class="btn-link--more" href="#">Mua</a>
+                </div>
+            </div>
+        </div>
+        </div>
+        <div class="swiper-slide swiper-slide-duplicate-prev" role="group" aria-label="6 / 6" data-swiper-slide-index="5" style="width: 207.2px; margin-right: 16px;">
+        <div class="box">
+            <div class="box__img"> <img src="~/user/assets/images/page/index/i1-img-product.png" alt="images-product"></div>
+            <div class="box__content">
+                <div class="box__title">
+                    <h3>Bàn Ăn Thông Minh 20201</h3>
+                </div>
+                <div class="box__priceDiscount">
+                    <p>1.490.000<span>Đ</span></p>
+                </div>
+                <div class="box__more">
+                    <a class="btn-link--more" href="./product-details.html">
+                        Xem sản phầm<svg xmlns="http://www.w3.org/2000/svg" width="8" height="11" viewBox="0 0 7 8">
+                            <path id="Polygon_10" data-name="Polygon 10" d="M4,0,8,7H0Z" transform="translate(7) rotate(90)" fill="#008c8c"></path>
+                        </svg>
+                    </a><a class="btn-link--more" href="#">Mua</a>
+                </div>
+            </div>
+        </div>
+        </div>
+        <div class="swiper-slide swiper-slide-duplicate swiper-slide-duplicate-active" role="group" aria-label="1 / 6" data-swiper-slide-index="0" style="width: 207.2px; margin-right: 16px;">
+        <div class="box">
+            <div class="box__img"> <img src="~/user/assets/images/page/index/i1-img-product.png" alt="images-product"></div>
+            <div class="box__content">
+                <div class="box__title">
+                    <h3>Bàn Ăn Thông Minh 20201</h3>
+                </div>
+                <div class="box__priceDiscount">
+                    <p>1.490.000<span>Đ</span></p>
+                </div>
+                <div class="box__more">
+                    <a class="btn-link--more" href="./product-details.html">
+                        Xem sản phầm<svg xmlns="http://www.w3.org/2000/svg" width="8" height="11" viewBox="0 0 7 8">
+                            <path id="Polygon_10" data-name="Polygon 10" d="M4,0,8,7H0Z" transform="translate(7) rotate(90)" fill="#008c8c"></path>
+                        </svg>
+                    </a><a class="btn-link--more" href="#">Mua</a>
+                </div>
+            </div>
+        </div>
+        </div><div class="swiper-slide swiper-slide-duplicate swiper-slide-duplicate-next" role="group" aria-label="2 / 6" data-swiper-slide-index="1" style="width: 207.2px; margin-right: 16px;">
+        <div class="box">
+            <div class="box__img"> <img src="~/user/assets/images/page/index/i1-img-product.png" alt="images-product"></div>
+            <div class="box__content">
+                <div class="box__title">
+                    <h3>Bàn Ăn Thông Minh 20201</h3>
+                </div>
+                <div class="box__priceDiscount">
+                    <p>1.490.000<span>Đ</span></p>
+                </div>
+                <div class="box__more">
+                    <a class="btn-link--more" href="./product-details.html">
+                        Xem sản phầm<svg xmlns="http://www.w3.org/2000/svg" width="8" height="11" viewBox="0 0 7 8">
+                            <path id="Polygon_10" data-name="Polygon 10" d="M4,0,8,7H0Z" transform="translate(7) rotate(90)" fill="#008c8c"></path>
+                        </svg>
+                    </a><a class="btn-link--more" href="#">Mua</a>
+                </div>
+            </div>
+        </div>
+        </div><div class="swiper-slide swiper-slide-duplicate" role="group" aria-label="3 / 6" data-swiper-slide-index="2" style="width: 207.2px; margin-right: 16px;">
+        <div class="box">
+            <div class="box__img"> <img src="~/user/assets/images/page/index/i1-img-product.png" alt="images-product"></div>
+            <div class="box__content">
+                <div class="box__title">
+                    <h3>Bàn Ăn Thông Minh 20201</h3>
+                </div>
+                <div class="box__priceDiscount">
+                    <p>1.490.000<span>Đ</span></p>
+                </div>
+                <div class="box__more">
+                    <a class="btn-link--more" href="./product-details.html">
+                        Xem sản phầm<svg xmlns="http://www.w3.org/2000/svg" width="8" height="11" viewBox="0 0 7 8">
+                            <path id="Polygon_10" data-name="Polygon 10" d="M4,0,8,7H0Z" transform="translate(7) rotate(90)" fill="#008c8c"></path>
+                        </svg>
+                    </a><a class="btn-link--more" href="#">Mua</a>
+                </div>
+            </div>
+        </div>
+        </div><div class="swiper-slide swiper-slide-duplicate" role="group" aria-label="4 / 6" data-swiper-slide-index="3" style="width: 207.2px; margin-right: 16px;">
+        <div class="box">
+            <div class="box__img"> <img src="~/user/assets/images/page/index/i1-img-product.png" alt="images-product"></div>
+            <div class="box__content">
+                <div class="box__title">
+                    <h3>Bàn Ăn Thông Minh 20201</h3>
+                </div>
+                <div class="box__priceDiscount">
+                    <p>1.490.000<span>Đ</span></p>
+                </div>
+                <div class="box__more">
+                    <a class="btn-link--more" href="./product-details.html">
+                        Xem sản phầm<svg xmlns="http://www.w3.org/2000/svg" width="8" height="11" viewBox="0 0 7 8">
+                            <path id="Polygon_10" data-name="Polygon 10" d="M4,0,8,7H0Z" transform="translate(7) rotate(90)" fill="#008c8c"></path>
+                        </svg>
+                    </a><a class="btn-link--more" href="#">Mua</a>
+                </div>
+            </div>
+        </div>
+        </div><div class="swiper-slide swiper-slide-duplicate" role="group" aria-label="5 / 6" data-swiper-slide-index="4" style="width: 207.2px; margin-right: 16px;">
+        <div class="box">
+            <div class="box__img"> <img src="~/user/assets/images/page/index/i1-img-product.png" alt="images-product"></div>
+            <div class="box__content">
+                <div class="box__title">
+                    <h3>Bàn Ăn Thông Minh 20201</h3>
+                </div>
+                <div class="box__priceDiscount">
+                    <p>1.490.000<span>Đ</span></p>
+                </div>
+                <div class="box__more">
+                    <a class="btn-link--more" href="./product-details.html">
+                        Xem sản phầm<svg xmlns="http://www.w3.org/2000/svg" width="8" height="11" viewBox="0 0 7 8">
+                            <path id="Polygon_10" data-name="Polygon 10" d="M4,0,8,7H0Z" transform="translate(7) rotate(90)" fill="#008c8c"></path>
+                        </svg>
+                    </a><a class="btn-link--more" href="#">Mua</a>
+                </div>
+            </div>
+        </div>
+        </div>
+        </div>
+        <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
+        </div>
+        <div class="swiper-button-next" tabindex="0" role="button" aria-label="Next slide" aria-controls="swiper-wrapper-46f5421b6efd4bd7" aria-disabled="false">
+        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 13 14">
+        <path id="Polygon_14" data-name="Polygon 14" d="M7,0l7,13H0Z" transform="translate(13) rotate(90)" fill="#fff"></path>
+        </svg>
+        </div>
+        <div class="swiper-button-prev swiper-button-disabled" tabindex="-1" role="button" aria-label="Previous slide" aria-controls="swiper-wrapper-46f5421b6efd4bd7" aria-disabled="true">
+        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 13 14">
+        <path id="Path_13998" data-name="Path 13998" d="M7,0l7,13H0Z" transform="translate(0 14) rotate(-90)" fill="#fff"></path>
+        </svg>
+        </div>
+        </div>
+        </div>
+        </div>*@
+</div>
+</main>
